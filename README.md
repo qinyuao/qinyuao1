@@ -2,8 +2,10 @@
 UserLogIn_Interface（包含脚本与guide）:登陆界面主程序，包括PCA+SVM人脸识别登陆与字符识别登陆；
 
 登录模式1如下：运行UserLogIn_Interface.m—>点击初始化按钮进行faceinitialize.m，完成样本训练工作—>点击facerecognition.m即可完成人脸识别进入登录确认界面
+
 登录模式2如下：运行UserLogIn_Interface.m—>输入账号：qinyuao密码：qinyuao123—>点击登录确认按钮即可完成字符匹配进入登录确认界面
 人脸识别程序构架如下：读入人脸照片—>灰度化—>检测人脸—>扣出人脸—>归一化尺寸—>在训练集的特征子空间中降维—>在训练集每维的最大最小值上数据归一化—>利用训练好的模型预测—>显示
+
 faceinitialize:初始化主程序，进行图像训练，进行数据读入、快速PCA、归一化、样本训练
 faceContainer.mat、scaling.mat、PCA.mat、s1-s41为此部分生成数据集，不可删除
 facerecognition:人脸识别主程序，调用摄像头捕捉图像，进行数据读入、快速PCA、归一化、训练、完成人脸识别；
